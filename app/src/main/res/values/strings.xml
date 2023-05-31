@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Patinfly</string>
+
+    //Headings
+    <string name="heading_one" translatable="false" tools:ignore="MissingTranslation">Do you fell &amp; Tired?</string>
+    <string name="heading_two">Look on your phone</string>
+    <string name="heading_three">Rent a scooter</string>
+
+
+    //Description
+    <string name="desc_one">Do you have a lot to walk yet? But you are already on your knee for tireness?</string>
+    <string name="desc_two">With Patynfly you will never be leaved alone with your fatiques</string>
+    <string name="desc_three">Use the app to rent the nearest scooter in your zone</string>
+
+
+    <string-array name="nationalities_array">
+        <item>Italy</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Spain</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+    </string-array>
+</resources>
