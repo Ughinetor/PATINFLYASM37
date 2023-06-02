@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.patinflyasm37.R
-import com.example.patinflyasm37.SignUpActivity
+import com.example.patinflyasm37.logpage.SignLogActivity
 
 class TutorialActivity : AppCompatActivity() {
     private lateinit var mSlideViewPager: ViewPager
@@ -40,14 +40,14 @@ class TutorialActivity : AppCompatActivity() {
             if (getItem(0) < 2)
                 mSlideViewPager.setCurrentItem(getItem(1), true)
             else {
-                val intent = Intent(this, SignUpActivity::class.java)
+                val intent = Intent(this, SignLogActivity::class.java)
                 startActivity(intent)
                 finish()
             }
         }
 
         skipBtn.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, SignLogActivity::class.java)
             startActivity(intent)
             finish()
         }

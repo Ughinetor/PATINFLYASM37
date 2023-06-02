@@ -14,7 +14,7 @@ class ActivityUserViewModel(app:Application): AndroidViewModel(app) {
     }
 
     fun getAllUsers(){
-        val userDao= UserDatabase.getInstance((getApplication()))?.userDataBaseDao()
+        val userDao= AppDatabase.getInstance((getApplication()))?.userDao()
         val list= userDao?.getAllUsers()
 
         allUsers.postValue(list)
@@ -25,12 +25,12 @@ class ActivityUserViewModel(app:Application): AndroidViewModel(app) {
     }
 
     fun insertUser(entity: User){
-        val userDao= UserDatabase.getInstance((getApplication()))?.userDataBaseDao()
+        val userDao= AppDatabase.getInstance((getApplication()))?.userDao()
         userDao?.insertUser(entity)
     }
 
     fun updateUser(entity: User){
-        val userDao= UserDatabase.getInstance((getApplication()))?.userDataBaseDao()
+        val userDao= AppDatabase.getInstance((getApplication()))?.userDao()
         userDao?.updateUser(entity)
     }
 }

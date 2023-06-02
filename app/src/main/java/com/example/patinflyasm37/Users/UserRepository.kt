@@ -1,26 +1,29 @@
 package com.example.patinflyasm37.Users
 
+import android.content.Context
+import android.database.sqlite.SQLiteConstraintException
 import android.util.Log
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import java.util.*
 
-class UserRepository(private val userDAO: UserDAO) {
 
-    fun insertUser(user: User) {
-        userDAO?.insertUser(user)
+class UserRepository {
+
+    fun getAllUsers(context: Context, userDao: UserDAO) = CoroutineScope(Dispatchers.Default).async {
+        return@async userDao.getAllUsers()
     }
 
-    fun getAllUsers(): List<User>? {
-        return userDAO?.getAllUsers()
-    }
 
-    fun updateUser(user: User) {
-        userDAO?.updateUser(user)
-    }
 
-    fun getUserByEmail(email: String): User? {
-        return userDAO?.getUserByEmail(email)
-    }
+    fun insertUser(context: Context, userDao: UserDAO,user: User) = CoroutineScope(Dispatchers.Default).async {
 
-    fun deleteUser(user: User) {
-        userDAO?.deleteUser(user)
+        try {
+            return@async userDao.insertUser(user)
+        } catch (e: SQLiteConstraintException) {
+            Log.d(UserRepository::class.simpleName, "Unique value error")
+            return@async LinkedList<User>()
+        }
     }
 }

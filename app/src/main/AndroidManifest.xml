@@ -12,7 +12,10 @@
         android:theme="@style/Theme.PatinflyASM37"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".logpage.SignLogActivity"
             android:exported="false" />
         <activity
             android:name=".Tutorial.TutorialActivity"
