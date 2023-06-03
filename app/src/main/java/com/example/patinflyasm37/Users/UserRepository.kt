@@ -16,6 +16,11 @@ class UserRepository {
     }
 
 
+   suspend fun getUser(context: Context,userDao: UserDAO,mail : String)=CoroutineScope(Dispatchers.Default).async {
+        return@async userDao.getUserByEmail(mail)
+    }
+
+
 
     fun insertUser(context: Context, userDao: UserDAO,user: User) = CoroutineScope(Dispatchers.Default).async {
 
