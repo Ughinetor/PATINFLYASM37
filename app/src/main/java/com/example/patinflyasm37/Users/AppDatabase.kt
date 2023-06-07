@@ -9,7 +9,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.patinflyasm37.Users.UserDAO
 
 //TODO: add entity Scooter::class
-@Database(entities = [User::class,Scooter::class], version = 2)
+@Database(entities = [User::class, Scooter::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDAO
     abstract fun scooterDao(): ScooterDao

@@ -18,6 +18,10 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding= true
+    }
 
     buildTypes {
         release {
@@ -32,14 +36,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
+
 }
 
 dependencies {
 
-    implementation 'androidx.databinding:baseLibrary:3.2.0-alpha11'
+
 
     constraints {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
@@ -57,6 +59,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     // Material Components

@@ -27,7 +27,7 @@ class SignUpFragment : Fragment() {
         val userDao = AppDatabase.getInstance(requireContext()).userDao()
 
 
-        val rootView = inflater.inflate(R.layout.activity_sign_up, container, false)
+        val rootView = inflater.inflate(R.layout.sign_up_frag, container, false)
         val name = rootView.findViewById<EditText>(R.id.name)
         val surname=rootView.findViewById<EditText>(R.id.surname)
         val email=rootView.findViewById<EditText>(R.id.email)

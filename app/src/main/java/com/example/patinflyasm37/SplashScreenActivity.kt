@@ -10,6 +10,10 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import com.example.patinflyasm37.Tutorial.TutorialActivity
 import com.example.patinflyasm37.Users.*
+import com.example.patinflyasm37.Users.AppDatabase
+import com.example.patinflyasm37.Users.User
+import com.example.patinflyasm37.Users.UserDAO
+import com.example.patinflyasm37.Users.UserRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -36,14 +40,11 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
 }
-fun databaseCleanInsertWithCoroutines(context: Context, userDao: UserDAO,user :User){
+fun databaseCleanInsertWithCoroutines(context: Context, userDao: UserDAO, user : User){
     CoroutineScope(Dispatchers.Default).launch {
 
         val insertResult: Deferred<Any> = UserRepository().insertUser(context, userDao,user)
         insertResult.await()
-        Log.d(
-            "CoroutineScope", "Users "
-        )
 
     }
 }
