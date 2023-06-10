@@ -1,21 +1,18 @@
-package com.example.patinflyasm37
+package com.example.patinflyasm37.Menu
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.example.patinflyasm37.Tutorial.TutorialActivity
+import com.example.patinflyasm37.R
 import com.example.patinflyasm37.logpage.SignLogActivity
 import com.google.android.material.navigation.NavigationView
 

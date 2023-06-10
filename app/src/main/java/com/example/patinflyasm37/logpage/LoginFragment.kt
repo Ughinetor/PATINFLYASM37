@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.example.patinflyasm37.MenuActivity
+import com.example.patinflyasm37.Menu.MenuActivity
 import com.example.patinflyasm37.R
 import com.example.patinflyasm37.Data.AppDatabase
 import kotlinx.coroutines.CoroutineScope

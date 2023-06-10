@@ -14,10 +14,10 @@
         android:theme="@style/Theme.PatinflyASM37"
         tools:targetApi="31">
         <activity
-            android:name=".ScooterDetailActivity"
+            android:name=".Menu.ScooterDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".Menu.MenuActivity"
             android:exported="false" />
         <activity
             android:name=".logpage.SignLogActivity"
