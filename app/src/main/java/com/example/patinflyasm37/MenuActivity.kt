@@ -46,6 +46,7 @@ class MenuActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
         navView.setNavigationItemSelectedListener {
 
             when (it.itemId) {

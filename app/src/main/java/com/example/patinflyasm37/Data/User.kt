@@ -1,10 +1,8 @@
-package com.example.patinflyasm37.Users
+package com.example.patinflyasm37.Data
 
-import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.versionedparcelable.ParcelField
 
 
 @Entity(tableName = "user")

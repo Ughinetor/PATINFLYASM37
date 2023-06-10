@@ -12,10 +12,7 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.patinflyasm37.MenuActivity
 import com.example.patinflyasm37.R
-import com.example.patinflyasm37.Tutorial.TutorialActivity
-import com.example.patinflyasm37.Users.AppDatabase
-import com.example.patinflyasm37.Users.User
-import com.example.patinflyasm37.databaseCleanInsertWithCoroutines
+import com.example.patinflyasm37.Data.AppDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

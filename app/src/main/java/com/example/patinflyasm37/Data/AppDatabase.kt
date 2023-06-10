@@ -1,4 +1,4 @@
-package com.example.patinflyasm37.Users
+package com.example.patinflyasm37.Data
 
 import android.content.Context
 import androidx.room.Database
@@ -6,10 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.example.patinflyasm37.Users.UserDAO
 
-//TODO: add entity Scooter::class
-@Database(entities = [User::class, Scooter::class], version = 2)
+@Database(entities = [User::class, Scooter::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDAO
     abstract fun scooterDao(): ScooterDao
@@ -24,21 +22,21 @@ abstract class AppDatabase : RoomDatabase() {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
 
-        val MIGRATION_1_2 = object : Migration(1, 2) {
+
+
+        val migration1to2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL(
-                    "ALTER TABLE user "
-                            + " ADD COLUMN last_update INTEGER"
-                );
+                // Perform the necessary SQL statements to update the schema
+                database.execSQL("ALTER TABLE scooters ADD COLUMN last_maintenance_date String")
             }
         }
+
 
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java, "application_database.db"
-            )
-                //.addMigrations(MIGRATION_1_2)
+            ).fallbackToDestructiveMigration()
                 .build()
     }
 }

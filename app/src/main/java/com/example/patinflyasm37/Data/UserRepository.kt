@@ -1,4 +1,4 @@
-package com.example.patinflyasm37.Users
+package com.example.patinflyasm37.Data
 
 import android.content.Context
 import android.database.sqlite.SQLiteConstraintException

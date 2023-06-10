@@ -1,11 +1,11 @@
-package com.example.patinflyasm37.Users
+package com.example.patinflyasm37.Data
 
 import androidx.room.*
 
 
 @Dao
 interface UserDAO {
-    @Insert
+    @Insert (onConflict = OnConflictStrategy.REPLACE)
     fun insertUser(user: User?)
 
     @Query("SELECT * FROM user")

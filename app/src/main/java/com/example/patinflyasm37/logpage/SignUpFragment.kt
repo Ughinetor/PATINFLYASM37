@@ -13,8 +13,8 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.patinflyasm37.MenuActivity
 import com.example.patinflyasm37.R
-import com.example.patinflyasm37.Users.AppDatabase
-import com.example.patinflyasm37.Users.User
+import com.example.patinflyasm37.Data.AppDatabase
+import com.example.patinflyasm37.Data.User
 import com.example.patinflyasm37.databaseCleanInsertWithCoroutines
 
 class SignUpFragment : Fragment() {
